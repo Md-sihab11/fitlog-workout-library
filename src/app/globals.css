@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @keyframes toastProgress {
   from {
     width: 100%;
