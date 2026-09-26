@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import { WorkoutProvider } from "@/context/WorkoutContext";
-import Hero from "@/components/hero";
 import Footer from "@/components/footer";
 
 const geistSans = Geist({
@@ -31,7 +30,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
        
        <WorkoutProvider>
         <Navbar />
-        <Hero />
+        
         {children}
         <Footer />
         </WorkoutProvider>
