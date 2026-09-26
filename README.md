@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FitLog-Workout-Library
 
-## Getting Started
+FitLog is a simple and responsive workout library built with Next.js. Users can explore different workouts, view workout details, save workouts, and create a personal workout plan.
 
-First, run the development server:
+## 🔗 Live Link
+[fit-log](https://fitlog-workout-library-pink.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📁 Project Folder Structure
+
+```text
+fitlog/
+├── public/                      # Static assets and icons
+│   ├── assets/                  # Images and logos (banner, logo)
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── src/                         # Application source code
+│   ├── app/                     # Next.js App Router (pages and layouts)
+│   │   ├── my-plan/             # Personalized workout plan page
+│   │   │   └── page.tsx
+│   │   ├── workouts/            # Workout details dynamic routes
+│   │   │   └── [id]/
+│   │   │       └── page.tsx
+│   │   ├── favicon.ico
+│   │   ├── globals.css          # Global styling & Tailwind CSS imports
+│   │   ├── layout.tsx           # Root layout with context & navigation
+│   │   ├── loading.tsx          # Global loading UI
+│   │   ├── not-found.tsx        # 404 page
+│   │   └── page.tsx             # Home page
+│   ├── components/              # Modular & reusable UI components
+│   │   ├── footer.tsx           # Footer component
+│   │   ├── hero.tsx             # Hero section component
+│   │   ├── navbar.tsx           # Navigation bar component
+│   │   ├── workoutAction.tsx    # Workout action buttons / cards
+│   │   └── workoutLibrary.tsx   # Workout library grid & filters
+│   ├── context/                 # React Context for global state
+│   │   └── WorkoutContext.tsx   # Workout tracking & plan state
+│   ├── lib/                     # Utilities & API service layer
+│   │   └── api.ts               # Data fetching functions
+│   └── types/                   # TypeScript interfaces & types
+│       └── worktypes.ts         # Workout and exercise type definitions
+├── .gitignore
+├── eslint.config.mjs
+├── next.config.ts
+├── next-env.d.ts
+├── package.json
+├── postcss.config.mjs
+├── README.md
+└── tsconfig.json
 ```
+## 🛠️ Technologies Used
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* Context API
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Key Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Workout Library**
+   Explore a collection of workouts with useful information such as category, difficulty, duration, and equipment.
 
-## Learn More
+2. **Workout Details**
+   View detailed information about individual workouts, including instructions and workout-related information.
 
-To learn more about Next.js, take a look at the following resources:
+3. **My Plan**
+   Add workouts to a personal workout plan and manage the workouts selected for your routine.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Save Workouts**
+   Save workouts for quick access and keep track of workouts you want to do later.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. **Responsive Design**
+   The application is designed to provide a smooth experience across desktop, tablet, and mobile devices.
 
-## Deploy on Vercel
+## 📌 Project Purpose
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+FitLog was built as a Next.js project to practice modern React and Next.js concepts, reusable components, state management, routing, and responsive UI development.
